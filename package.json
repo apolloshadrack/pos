@@ -1,0 +1,43 @@
+{
+  "name": "liquor-store-pos",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "sanity": "sanity dev",
+    "sanity:deploy": "sanity deploy",
+    "seed:products": "tsx scripts/seed-products.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.15.0",
+    "@sanity/client": "^6.15.0",
+    "@sanity/image-url": "^1.0.2",
+    "bcryptjs": "^2.4.3",
+    "date-fns": "^3.3.1",
+    "lucide-react": "^0.344.0",
+    "next": "^14.2.0",
+    "next-auth": "^4.24.5",
+    "next-sanity": "^6.0.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "zustand": "^4.5.0"
+  },
+  "devDependencies": {
+    "@sanity/vision": "^3.56.0",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^20.11.0",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "autoprefixer": "^10.4.17",
+    "dotenv": "^16.6.1",
+    "postcss": "^8.4.33",
+    "prisma": "^5.15.0",
+    "sanity": "^3.56.0",
+    "tailwindcss": "^3.4.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.3.3"
+  }
+}
