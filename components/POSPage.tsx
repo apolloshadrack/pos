@@ -240,8 +240,8 @@ export default function POSPage() {
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${selectedCategory === cat
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
                 >
                   {cat.charAt(0).toUpperCase() + cat.slice(1)} {cat === 'all' ? 'Products' : ''}
@@ -258,7 +258,7 @@ export default function POSPage() {
               ) : (
                 filteredProducts.map((product) => (
                   <div
-                    key={product.id}
+                    key={product._id}
                     className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"
                   >
                     <div className="flex justify-between items-start mb-2">
@@ -279,7 +279,7 @@ export default function POSPage() {
                       </div>
                       <button
                         onClick={() => addItem({
-                          id: product.id,
+                          id: product._id,
                           name: product.name,
                           price: product.price,
                           category: product.category,
@@ -376,8 +376,8 @@ export default function POSPage() {
                       <button
                         onClick={() => setPaymentMethod('cash')}
                         className={`flex items-center justify-center space-x-1 px-3 py-2 border rounded-md text-sm ${paymentMethod === 'cash'
-                            ? 'border-blue-600 bg-blue-50 text-blue-600'
-                            : 'border-gray-300 hover:bg-gray-50'
+                          ? 'border-blue-600 bg-blue-50 text-blue-600'
+                          : 'border-gray-300 hover:bg-gray-50'
                           }`}
                       >
                         <DollarSign className="w-4 h-4" />
@@ -386,8 +386,8 @@ export default function POSPage() {
                       <button
                         onClick={() => setPaymentMethod('card')}
                         className={`flex items-center justify-center space-x-1 px-3 py-2 border rounded-md text-sm ${paymentMethod === 'card'
-                            ? 'border-blue-600 bg-blue-50 text-blue-600'
-                            : 'border-gray-300 hover:bg-gray-50'
+                          ? 'border-blue-600 bg-blue-50 text-blue-600'
+                          : 'border-gray-300 hover:bg-gray-50'
                           }`}
                       >
                         <CreditCard className="w-4 h-4" />
@@ -396,8 +396,8 @@ export default function POSPage() {
                       <button
                         onClick={() => setPaymentMethod('mobile')}
                         className={`flex items-center justify-center space-x-1 px-3 py-2 border rounded-md text-sm ${paymentMethod === 'mobile'
-                            ? 'border-blue-600 bg-blue-50 text-blue-600'
-                            : 'border-gray-300 hover:bg-gray-50'
+                          ? 'border-blue-600 bg-blue-50 text-blue-600'
+                          : 'border-gray-300 hover:bg-gray-50'
                           }`}
                       >
                         <Smartphone className="w-4 h-4" />
